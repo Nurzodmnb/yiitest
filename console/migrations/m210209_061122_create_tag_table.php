@@ -3,18 +3,18 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `{{%bulim}}`.
+ * Handles the creation of table `{{%tag}}`.
  */
-class m210202_053538_create_bulim_table extends Migration
+class m210209_061122_create_tag_table extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        $this->createTable('{{%bulim}}', [
+        $this->createTable('{{%tag}}', [
             'id' => $this->primaryKey(),
-            'name' => $this->string(255)
+            'title' => $this->string()
         ]);
     }
 
@@ -23,6 +23,6 @@ class m210202_053538_create_bulim_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('{{%bulim}}');
+        $this->dropTable('{{%tag}}');
     }
 }
